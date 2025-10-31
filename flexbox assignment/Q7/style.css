@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #222;
+  animation: jump 0.8s infinite;
+}
+.dot.a {
+  animation-delay: 0s;
+}
+.dot.b {
+  animation-delay: 0.12s;
+}
+.dot.c {
+  animation-delay: 0.24s;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
